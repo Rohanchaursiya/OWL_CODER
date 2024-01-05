@@ -33,3 +33,9 @@ public class Longest_Increasing_Subsequence {
         System.out.println(ans);
     }
 }
+/*
+Output
+ 5
+3 2 4 5 6 
+4
+ */
