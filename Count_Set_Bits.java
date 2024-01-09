@@ -60,64 +60,64 @@ public class Count_Set_Bits {
 
 
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class BitSwapping {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+// public class BitSwapping {
+//     public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
 
-        // Input format: X P1 P2 N
-        int X = scanner.nextInt();
-        int P1 = scanner.nextInt();
-        int P2 = scanner.nextInt();
-        int N = scanner.nextInt();
+//         // Input format: X P1 P2 N
+//         int X = scanner.nextInt();
+//         int P1 = scanner.nextInt();
+//         int P2 = scanner.nextInt();
+//         int N = scanner.nextInt();
 
-        // Close the scanner as it's no longer needed
-        scanner.close();
+//         // Close the scanner as it's no longer needed
+//         scanner.close();
 
-        // Call the function to perform bit swapping
-        int result = swapBits(X, P1, P2, N);
+//         // Call the function to perform bit swapping
+//         int result = swapBits(X, P1, P2, N);
 
-        // Output the result
-        System.out.println(result);
-    }
+//         // Output the result
+//         System.out.println(result);
+//     }
 
-    // Function to swap N bits at positions P1 and P2 in the binary representation of X
-    private static int swapBits(int X, int P1, int P2, int N) {
-        // Create masks for the bits to be swapped
-        int mask1 = ((1 << N) - 1) << (P1 - N);
-        int mask2 = ((1 << N) - 1) << (P2 - N);
+//     // Function to swap N bits at positions P1 and P2 in the binary representation of X
+//     private static int swapBits(int X, int P1, int P2, int N) {
+//         // Create masks for the bits to be swapped
+//         int mask1 = ((1 << N) - 1) << (P1 - N);
+//         int mask2 = ((1 << N) - 1) << (P2 - N);
 
-        // Extract the bits to be swapped
-        int bits1 = (X & mask1) >> (P1 - N);
-        int bits2 = (X & mask2) >> (P2 - N);
+//         // Extract the bits to be swapped
+//         int bits1 = (X & mask1) >> (P1 - N);
+//         int bits2 = (X & mask2) >> (P2 - N);
 
-        // Clear the bits to be swapped
-        X = X & ~(mask1 | mask2);
+//         // Clear the bits to be swapped
+//         X = X & ~(mask1 | mask2);
 
-        // Set the swapped bits
-        X = X | (bits1 << (P2 - N)) | (bits2 << (P1 - N));
+//         // Set the swapped bits
+//         X = X | (bits1 << (P2 - N)) | (bits2 << (P1 - N));
 
-        return X;
-    }
-}
-
-
+//         return X;
+//     }
+// }
 
 
-//import java.util.*;
-public class OwlCoder{
-    public static void main(String args[]){
-        Scanner sc=new Scanner(System.in);
-        long n=sc.nextLong();
-        int bits=32;
-        long ans=0;
-        while(bits--!=0){
-            ans=ans|(n&1);
-            ans<<=1;
-            n>>=1;
-        }
-        ans>>=1;
-        System.out.println(ans);
-    }
-}
+
+
+// //import java.util.*;
+// public class OwlCoder{
+//     public static void main(String args[]){
+//         Scanner sc=new Scanner(System.in);
+//         long n=sc.nextLong();
+//         int bits=32;
+//         long ans=0;
+//         while(bits--!=0){
+//             ans=ans|(n&1);
+//             ans<<=1;
+//             n>>=1;
+//         }
+//         ans>>=1;
+//         System.out.println(ans);
+//     }
+// }
