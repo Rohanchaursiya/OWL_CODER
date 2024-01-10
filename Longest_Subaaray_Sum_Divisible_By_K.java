@@ -20,7 +20,7 @@ public class Longest_Subaaray_Sum_Divisible_By_K {
                 rem+=k;
             }
             if(hm.containsKey(rem)){
-                max_len=Math.max(max_len,1-hm.get(rem));
+                max_len=Math.max(max_len,i-hm.get(rem));
             }
             if(!hm.containsKey(rem)){
                 hm.put(rem,i);
