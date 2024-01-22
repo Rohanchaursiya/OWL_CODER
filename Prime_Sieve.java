@@ -4,8 +4,6 @@ public class Prime_Sieve {
         ArrayList<Long> li=new ArrayList<>();
         boolean isPrime[]=new boolean[(int)n+1];
         Arrays.fill(isPrime,true);
-        long prefix[]=new long[(int)n+1];
-        Arrays.fill(prefix,0);
         for(int i=2;i<(long)n;i++){
             if(isPrime[i]){
                 li.add((long)i);
@@ -21,32 +19,16 @@ public class Prime_Sieve {
             if(isPrime[i] && isPrime[i]){
                 c++;
             }
-            prefix[i]=c;
         }
         return li;
         
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        // int t=sc.nextInt();
-        // while(t--!=0){
+        int t=sc.nextInt();
+        while(t--!=0){
             Long n = sc.nextLong();
-            //long ans[]=sieve(n);
             ArrayList<Long> li=sieve((long)n);
-        
-            // if(n<2){
-            //     System.out.println(0);
-            // }
-            // int c=0;
-            // for(int i=2;i<=n;i++){
-            //     for(int j=i;j<=n;j++){
-            //         int psum=i+j;
-            //         if(li.contains(psum)){
-            //             c++;
-            //         }
-            //     }
-            // }
-            //System.out.println(c);
             for(int i=0;i<li.size();i++){
                 System.out.print(li.get(i)+" ");
             }
